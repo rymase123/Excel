@@ -1,0 +1,15 @@
+Sub RefreshPBIDConnection()
+    Dim conn As WorkbookConnection
+    
+    ' Loop through all connections in the workbook
+    For Each conn In ThisWorkbook.Connections
+        ' Check if the connection name matches "PBID_FORECAST_MODEL_ACTUALS"
+        If conn.Name = "CONNECTION NAME HERE" Then
+            conn.Refresh
+            MsgBox "Connection '" & conn.Name & "' has been refreshed successfully.", vbInformation
+            Exit Sub
+        End If
+    Next conn
+    
+    MsgBox "Connection 'CONNECTION NAME HERE' not found.", vbExclamation
+End Sub
