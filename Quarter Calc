@@ -1,0 +1,3 @@
+=IF(MOD(MONTH(DZ1),3)=0, "A", "B")
+
+If the month is 3, 6, 9, 12 then "A" else "B"
